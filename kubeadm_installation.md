@@ -77,7 +77,13 @@ sudo apt install -y kubeadm kubelet kubectl -y
 
     <kbd>![image](https://github.com/paragpallavsingh/kubernetes-kickstarter/assets/40052830/ec7b4684-7719-4d09-81d8-eee27b98972a)</kbd>
 
-
+See the node 
+```bash
+ sudo systemctl stop kubelet
+ sudo systemctl start kubelet
+ strace -eopenat kubectl version
+ kubectl get nodes
+```
 5. Generate a token for worker nodes to join:
 
     ```bash
